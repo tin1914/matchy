@@ -31,8 +31,9 @@ function findMatches() {
 
     // Sample data for demonstration (replace with actual data fetching in a real app)
     const matches = [
-        { shade: "#FF5733", brand: "GRWM", image: "images/product1.jpg", name: "Radiant Rouge" },
-        { shade: "#33FF57", brand: "Colourette Cosmetics", image: "images/product2.jpg", name: "Emerald Glow" }
+        { shade: "Almond", brand: "GRWM", image: "images/GRWM-Cosmetics-Radiance-Tint-Multiuse-Base_Almond.PNG", link:"https://grwmcosmetics.com.ph/products/radiance-tint-multiuse-base?variant=45537799438637",   name: "Radiance Tint Multiuse Base Almond" },
+        { shade: "Beige", brand: "GRWM", image: "images/GRWM-Cosmetics-Radiance-Tint-Multiuse-Base_Beige.PNG", link: "https://grwmcosmetics.com.ph/products/radiance-tint-multiuse-base?variant=49824351191341", name: "Radiance Tint Multiuse Base Beige" },
+        { shade: "Butterscotch", brand: "BLK", image: "images/blk-airy-matte-cushion-foundation_Butterscotch.webp", link: "https://blkcosmetics.com.ph/products/blk-airy-matte-cushion-foundation?_pos=1&_sid=58ceef031&_ss=r&variant=47606419292463", name: "Airy Matte Cushion Foundation Butterscotch" }
     ];
 
     // Clear previous matches
@@ -52,6 +53,9 @@ function findMatches() {
                 <p>Shade: ${match.shade}</p>
                 <p>Brand: ${match.brand}</p>
                 <button class="btn" onclick="viewProductImage('${match.image}')">View Product</button>
+                <button class="btn" onclick="viewProductLink('${match.link}')">
+                    <img src="images/cart.png" alt="Product Icon" style="width: 20px; height: 20px; vertical-align: middle;">
+                </button>
             </div>
         `;
         matchesContainer.appendChild(matchDiv);
@@ -79,3 +83,9 @@ function viewProductImage(imageSrc) {
     modal.appendChild(image);
     document.body.appendChild(modal);
 }
+
+// Redirect to the product link
+function viewProductLink(link) {
+    window.open(link, "_blank");
+}
+
