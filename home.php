@@ -47,7 +47,7 @@
                 <option value="brand1">GRWM</option>
                 <option value="brand2">Colourette Cosmetics</option>
                 <option value="brand3">Issy & Co.</option>
-                <option value="brand4">BLK Cosmetics</option>
+                <option value="brand4">BLK</option>
                 <option value="brand5">Ever Bilena</option>
                 <option value="brand6">Happy Skin</option>
                 <option value="brand7">Vice Cosmetics</option>
